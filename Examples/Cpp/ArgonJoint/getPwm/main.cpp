@@ -8,12 +8,14 @@ ArgonBase myBase;
 Serial pc(serialTX, serialRX);
 
 int main(){
-	
-	// Get availability
-	int j1 = myBase.joint1.getAvailable();
+	// Set PWM
+	myBase.joint1.setPwm();
+
+	// Get PWM
+	int j1 = myBase.joint1.getPwm();
 
 	while(1){
-		// Print availability to serial
+		// Print pwm value
 		pc.printf("%d \r\n", j1);
 		wait_ms(100);
 

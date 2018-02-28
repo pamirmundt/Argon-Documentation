@@ -9,11 +9,11 @@ Serial pc(serialTX, serialRX);
 
 int main(){
 	
-	// Get availability
-	int j1 = myBase.joint1.getAvailable();
+	// Get encoder tick per round
+	int j1 = myBase.joint1.getEncoderTicksPerRound();
 
 	while(1){
-		// Print availability to serial
+		// Print encoder ticks per round to serial
 		pc.printf("%d \r\n", j1);
 		wait_ms(100);
 

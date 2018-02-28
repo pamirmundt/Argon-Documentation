@@ -9,11 +9,11 @@ Serial pc(serialTX, serialRX);
 
 int main(){
 	
-	// Get availability
-	int j1 = myBase.joint1.getAvailable();
+	// Get encoding mode
+	int j1 = myBase.joint1.getEncodingMode();
 
 	while(1){
-		// Print availability to serial
+		// Print encoding mode to serial
 		pc.printf("%d \r\n", j1);
 		wait_ms(100);
 
